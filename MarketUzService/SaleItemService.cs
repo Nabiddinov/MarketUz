@@ -1,11 +1,11 @@
-﻿using AutoMapper;
+﻿using System.Data.Common;
+using AutoMapper;
 using DiyorMarket.Domain.Interfaces.Services;
 using MarketUz.Domain.DTOs.SaleItem;
 using MarketUz.Domain.Entities;
 using MarketUz.Domain.Exceptions;
 using MarketUz.Infrastructure.Persistence;
 using Microsoft.Extensions.Logging;
-using System.Data.Common;
 
 namespace DiyorMarket.Services
 {

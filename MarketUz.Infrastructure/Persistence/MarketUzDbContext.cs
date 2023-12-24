@@ -1,6 +1,6 @@
-﻿using MarketUz.Domain.Entities;
+﻿using System.Reflection;
+using MarketUz.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace MarketUz.Infrastructure.Persistence
 {
@@ -13,7 +13,7 @@ namespace MarketUz.Infrastructure.Persistence
         public virtual DbSet<SaleItem> SaleItems { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<Supply> Supplies { get; set; }
-        public virtual DbSet<SupplyItem> SupplyItems { get; set; }  
+        public virtual DbSet<SupplyItem> SupplyItems { get; set; }
 
         public MarketUzDbContext(DbContextOptions<MarketUzDbContext> options)
             : base(options)

@@ -1,5 +1,5 @@
-﻿using MarketUz.Domain.Exceptions;
-using System.Net;
+﻿using System.Net;
+using MarketUz.Domain.Exceptions;
 
 namespace MarketUz.Middlewares
 {

@@ -17,17 +17,17 @@ namespace DiyorMarket.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<SupplyDto>> Get()
         {
-          
+
             var supplies = _supplyService.GetSupplies();
 
             return Ok(supplies);
-          
+
         }
 
         [HttpGet("{id}", Name = "GetSupplyById")]
         public ActionResult<SupplyDto> Get(int id)
         {
-           var supply = _supplyService.GetSupplyById(id);
+            var supply = _supplyService.GetSupplyById(id);
 
             if (supply is null)
             {
@@ -35,7 +35,7 @@ namespace DiyorMarket.Controllers
             }
 
             return Ok(supply);
-           
+
         }
 
         [HttpPost]
@@ -45,7 +45,7 @@ namespace DiyorMarket.Controllers
             _supplyService.CreateSupply(supply);
 
             return StatusCode(201);
-            
+
         }
 
         [HttpPut("{id}")]
@@ -56,21 +56,21 @@ namespace DiyorMarket.Controllers
                 return BadRequest(
                     $"Route id: {id} does not match with parameter id: {supply.Id}.");
             }
-        
+
             _supplyService.UpdateSupply(supply);
 
             return NoContent();
-          
+
         }
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-         
+
             _supplyService.DeleteSupply(id);
 
             return NoContent();
-           
+
         }
     }
 }

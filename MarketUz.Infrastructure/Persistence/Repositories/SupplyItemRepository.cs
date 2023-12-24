@@ -8,6 +8,6 @@ namespace MarketUz.Infrastructure.Persistence.Repositories
         public SupplyItemRepository(MarketUzDbContext context)
             : base(context) { }
 
-  
+
     }
 }

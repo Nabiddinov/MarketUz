@@ -5,10 +5,10 @@ namespace MarketUz.Infrastructure.Persistence.Repositories
 {
     public class SaleItemRepository : RepositoryBase<SaleItem>, ISaleItemRepository
     {
-        public SaleItemRepository(MarketUzDbContext context) 
+        public SaleItemRepository(MarketUzDbContext context)
             : base(context)
         { }
 
-    
+
     }
 }
