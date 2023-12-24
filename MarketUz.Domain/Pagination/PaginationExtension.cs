@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MarketUz.Domain.Pagination
 {
-
     public static class PaginationExtension
     {
         public static async Task<PaginatedList<T>> ToPaginatedListAsync<T>(
@@ -33,5 +32,3 @@ namespace MarketUz.Domain.Pagination
         }
     }
 }
-
-
