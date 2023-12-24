@@ -15,7 +15,6 @@ namespace MarketUz.Domain.Mappings
             CreateMap<CustomerDto, Customer>();
             CreateMap<CustomerForCreateDto, Customer>();
             CreateMap<CustomerForUpdateDto, Customer>();
-
         }
     }
 }
