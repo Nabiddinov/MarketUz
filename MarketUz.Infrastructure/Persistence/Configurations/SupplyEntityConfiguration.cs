@@ -19,6 +19,5 @@ namespace MarketUz.Infrastructure.Persistence.Configurations
                 .WithMany(sp => sp.Supplies)
                 .HasForeignKey(su => su.SupplierId);
         }
-
     }
 }

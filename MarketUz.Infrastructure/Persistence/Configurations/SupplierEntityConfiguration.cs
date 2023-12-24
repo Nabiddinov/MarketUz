@@ -24,7 +24,4 @@ namespace MarketUz.Infrastructure.Persistence.Configurations
                 .HasMaxLength(255);
         }
     }
-
-
 }
-

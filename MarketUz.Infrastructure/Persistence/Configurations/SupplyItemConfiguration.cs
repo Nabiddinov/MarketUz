@@ -24,9 +24,6 @@ namespace MarketUz.Infrastructure.Persistence.Configurations
             builder.HasOne(spi => spi.Supply)
                 .WithMany(su => su.SupplyItems)
                 .HasForeignKey(spi => spi.SupplyId);
-
         }
     }
-
 }
-

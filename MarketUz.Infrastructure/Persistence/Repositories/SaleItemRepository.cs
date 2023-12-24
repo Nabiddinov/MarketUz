@@ -9,6 +9,5 @@ namespace MarketUz.Infrastructure.Persistence.Repositories
             : base(context)
         { }
 
-
     }
 }
