@@ -68,8 +68,6 @@ namespace DiyorMarketApi.Controllers
 
         }
 
-
-
         // DELETE api/<ProductsController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
