@@ -21,7 +21,6 @@ namespace DiyorMarket.Controllers
             var saleItems = _saleItemService.GetSaleItems();
 
             return Ok(saleItems);
-
         }
 
         [HttpGet("{id}", Name = "GetSaleItemById")]
@@ -36,7 +35,6 @@ namespace DiyorMarket.Controllers
             }
 
             return Ok(saleItem);
-
         }
 
         [HttpPost]
@@ -46,7 +44,6 @@ namespace DiyorMarket.Controllers
             _saleItemService.CreateSaleItem(saleItem);
 
             return StatusCode(201);
-
         }
 
         [HttpPut("{id}")]
@@ -61,7 +58,6 @@ namespace DiyorMarket.Controllers
             _saleItemService.UpdateSaleItem(saleItem);
 
             return NoContent();
-
         }
 
         [HttpDelete("{id}")]
@@ -71,7 +67,6 @@ namespace DiyorMarket.Controllers
             _saleItemService.DeleteSaleItem(id);
 
             return NoContent();
-
         }
     }
 }
