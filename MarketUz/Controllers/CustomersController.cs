@@ -22,8 +22,6 @@ namespace DiyorMarket.Controllers
             var customers = _customerService.GetCustomers();
 
             return Ok(customers);
-
-
         }
 
         [HttpGet("{id}", Name = "GetCustomerById")]
@@ -38,7 +36,6 @@ namespace DiyorMarket.Controllers
             }
 
             return Ok(customer);
-
         }
 
         [HttpPost]
@@ -48,7 +45,6 @@ namespace DiyorMarket.Controllers
             _customerService.CreateCustomer(customer);
 
             return StatusCode(201);
-
         }
 
         [HttpPut("{id}")]
@@ -63,7 +59,6 @@ namespace DiyorMarket.Controllers
             _customerService.UpdateCustomer(customer);
 
             return NoContent();
-
         }
 
         [HttpDelete("{id}")]
@@ -73,7 +68,6 @@ namespace DiyorMarket.Controllers
             _customerService.DeleteCustomer(id);
 
             return NoContent();
-
         }
     }
 }
