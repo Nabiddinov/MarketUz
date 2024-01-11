@@ -16,7 +16,6 @@ namespace DiyorMarketApi.Controllers
         public ProductsController(IProductService productService)
         {
             _productService = productService;
-
         }
 
         // GET: api/<ProductsController>
@@ -65,7 +64,6 @@ namespace DiyorMarketApi.Controllers
             _productService.UpdateProduct(product);
 
             return NoContent();
-
         }
 
         // DELETE api/<ProductsController>/5
