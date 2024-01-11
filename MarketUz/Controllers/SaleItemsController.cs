@@ -26,7 +26,6 @@ namespace DiyorMarket.Controllers
         [HttpGet("{id}", Name = "GetSaleItemById")]
         public ActionResult<SaleItemDto> Get(int id)
         {
-
             var saleItem = _saleItemService.GetSaleItemById(id);
 
             if (saleItem is null)
@@ -40,7 +39,6 @@ namespace DiyorMarket.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] SaleItemForCreateDto saleItem)
         {
-
             _saleItemService.CreateSaleItem(saleItem);
 
             return StatusCode(201);
@@ -63,7 +61,6 @@ namespace DiyorMarket.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-
             _saleItemService.DeleteSaleItem(id);
 
             return NoContent();
