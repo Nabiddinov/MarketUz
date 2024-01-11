@@ -21,7 +21,6 @@ namespace DiyorMarket.Controllers
             var supplyItems = _supplyItemService.GetSupplyItems();
 
             return Ok(supplyItems);
-
         }
 
         [HttpGet("{id}", Name = "GetSupplyItemById")]
@@ -36,7 +35,6 @@ namespace DiyorMarket.Controllers
             }
 
             return Ok(supplyItem);
-
         }
 
         [HttpPost]
@@ -46,7 +44,6 @@ namespace DiyorMarket.Controllers
             _supplyItemService.CreateSupplyItem(supplyItem);
 
             return StatusCode(201);
-
         }
 
         [HttpPut("{id}")]
@@ -58,21 +55,17 @@ namespace DiyorMarket.Controllers
                     $"Route id: {id} does not match with parameter id: {supplyItem.Id}.");
             }
 
-
             _supplyItemService.UpdateSupplyItem(supplyItem);
 
             return NoContent();
-
         }
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-
             _supplyItemService.DeleteSupplyItem(id);
 
             return NoContent();
-
         }
     }
 }
