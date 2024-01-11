@@ -35,19 +35,16 @@ namespace DiyorMarket.Controllers
                 return NotFound($"Sale with id: {id} does not exist.");
             }
             return Ok(sale);
-
         }
 
         [HttpGet("{id}/saleItems")]
         public ActionResult<SaleItemDto> GetSaleItemsBySaleId(int id)
         {
-
             var saleItems = _saleItemService.GetSaleItems();
 
             var filteredSaleItems = saleItems.Where(x => x.SaleId == id).ToList();
 
             return Ok(filteredSaleItems);
-
         }
 
         [HttpPost]
@@ -70,17 +67,14 @@ namespace DiyorMarket.Controllers
             _saleService.UpdateSale(sale);
 
             return NoContent();
-
         }
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-
             _saleService.DeleteSale(id);
 
             return NoContent();
-
         }
     }
 }
