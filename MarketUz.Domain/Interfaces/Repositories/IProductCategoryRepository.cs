@@ -5,4 +5,4 @@ namespace MarketUz.Domain.Interfaces.Repositories
     public interface IProductCategoryRepository : IRepositoryBase<ProductCategory>
     {
     }
-}
+}`

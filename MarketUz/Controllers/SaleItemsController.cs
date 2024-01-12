@@ -17,7 +17,6 @@ namespace DiyorMarket.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<SaleItemDto>> Get()
         {
-
             var saleItems = _saleItemService.GetSaleItems();
 
             return Ok(saleItems);
