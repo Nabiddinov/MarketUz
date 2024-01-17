@@ -121,7 +121,6 @@ namespace MarketUz.Services
                 _context.Products.Remove(product);
             }
             _context.SaveChanges();
-
         }
     }
 }

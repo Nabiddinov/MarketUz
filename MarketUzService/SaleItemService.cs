@@ -30,7 +30,6 @@ namespace DiyorMarket.Services
             var saleItemDtos = _mapper.Map<IEnumerable<SaleItemDto>>(saleItems);
 
             return saleItemDtos;
-
         }
 
         public SaleItemDto? GetSaleItemById(int id)
@@ -44,7 +43,6 @@ namespace DiyorMarket.Services
             var saleItemDto = _mapper.Map<SaleItemDto>(saleItem);
 
             return saleItemDto;
-
         }
 
         public SaleItemDto CreateSaleItem(SaleItemForCreateDto saleItemToCreate)
@@ -125,7 +123,5 @@ namespace DiyorMarket.Services
                 throw;
             }
         }
-
-
     }
 }

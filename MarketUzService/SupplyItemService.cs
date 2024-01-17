@@ -42,7 +42,6 @@ namespace DiyorMarket.Services
             var supplyItemDto = _mapper.Map<SupplyItemDto>(supplyItem);
 
             return supplyItemDto;
-
         }
 
         public SupplyItemDto CreateSupplyItem(SupplyItemForCreateDto supplyItemToCreate)
@@ -67,7 +66,6 @@ namespace DiyorMarket.Services
 
             _context.SupplyItems.Update(supplyItemEntity);
             _context.SaveChanges();
-
         }
 
         public void DeleteSupplyItem(int id)
@@ -78,7 +76,6 @@ namespace DiyorMarket.Services
                 _context.SupplyItems.Remove(supplyItem);
             }
             _context.SaveChanges();
-
         }
     }
 }

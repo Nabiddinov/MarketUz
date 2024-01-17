@@ -29,12 +29,10 @@ namespace DiyorMarket.Services
             var supplyDtos = _mapper.Map<IEnumerable<SupplyDto>>(supplies);
 
             return supplyDtos;
-
         }
 
         public SupplyDto? GetSupplyById(int id)
         {
-
             var supply = _context.Supplies.FirstOrDefault(x => x.Id == id);
             if (supply is null)
             {
@@ -47,7 +45,6 @@ namespace DiyorMarket.Services
 
         public SupplyDto CreateSupply(SupplyForCreateDto supplyToCreate)
         {
-
             var supplyEntity = _mapper.Map<Supply>(supplyToCreate);
 
             _context.Supplies.Add(supplyEntity);
@@ -56,22 +53,18 @@ namespace DiyorMarket.Services
             var supplyDto = _mapper.Map<SupplyDto>(supplyEntity);
 
             return supplyDto;
-
         }
 
         public void UpdateSupply(SupplyForUpdateDto supplyToUpdate)
         {
-
             var supplyEntity = _mapper.Map<Supply>(supplyToUpdate);
 
             _context.Supplies.Update(supplyEntity);
             _context.SaveChanges();
-
         }
 
         public void DeleteSupply(int id)
         {
-
             var supply = _context.Supplies.FirstOrDefault(x => x.Id == id);
             if (supply is not null)
             {
