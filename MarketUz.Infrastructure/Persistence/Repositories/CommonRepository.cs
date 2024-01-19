@@ -89,9 +89,6 @@ namespace MarketUz.Infrastructure.Persistence.Repositories
             }
         }
 
-
-
-
         public CommonRepository(MarketUzDbContext context)
         {
             _context = context;
@@ -104,7 +101,5 @@ namespace MarketUz.Infrastructure.Persistence.Repositories
         {
             return _context.SaveChanges();
         }
-
-
     }
 }
