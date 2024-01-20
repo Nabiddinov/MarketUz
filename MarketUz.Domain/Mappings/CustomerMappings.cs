@@ -8,7 +8,6 @@ namespace MarketUz.Domain.Mappings
     {
         public CustomerMappings()
         {
-
             CreateMap<Customer, CustomerDto>()
                 .ForMember(x => x.FullName, r => r.MapFrom(x => x.FirstName + "" + x.LastName));
 

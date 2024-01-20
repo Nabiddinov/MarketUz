@@ -25,6 +25,5 @@ namespace MarketUz.Infrastructure.Persistence.Configurations
                 .WithMany(s => s.SaleItems)
                 .HasForeignKey(st => st.SaleId);
         }
-
     }
 }
