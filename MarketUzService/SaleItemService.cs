@@ -24,7 +24,6 @@ namespace DiyorMarket.Services
 
         public IEnumerable<SaleItemDto> GetSaleItems()
         {
-
             var saleItems = _context.SaleItems.ToList();
 
             var saleItemDtos = _mapper.Map<IEnumerable<SaleItemDto>>(saleItems);
@@ -34,7 +33,6 @@ namespace DiyorMarket.Services
 
         public SaleItemDto? GetSaleItemById(int id)
         {
-
             var saleItem = _context.SaleItems.FirstOrDefault(x => x.Id == id);
             if (saleItem is null)
             {
