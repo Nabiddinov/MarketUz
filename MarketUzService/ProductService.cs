@@ -97,7 +97,6 @@ namespace MarketUz.Services
             var productDto = _mapper.Map<ProductDto>(productEntity);
 
             return productDto;
-
         }
 
         public void UpdateProduct(ProductForUpdateDto productToUpdate)
@@ -106,7 +105,6 @@ namespace MarketUz.Services
 
             _context.Products.Update(productEntity);
             _context.SaveChanges();
-
         }
 
         public void DeleteProduct(int id)
