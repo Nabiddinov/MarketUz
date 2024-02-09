@@ -23,7 +23,6 @@ namespace DiyorMarket.Services
 
         public IEnumerable<SupplyDto> GetSupplies()
         {
-
             var supplies = _context.Supplies.ToList();
 
             var supplyDtos = _mapper.Map<IEnumerable<SupplyDto>>(supplies);
